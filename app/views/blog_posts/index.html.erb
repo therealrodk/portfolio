@@ -7,8 +7,25 @@
 <% @blog_posts.each do |blog_post| %>
   <div>
     <h2 class="font-bold">
-      <%= link_to blog_post.title, blog_post %>
+      <%= link_to blog_post.title, blog_post %><br/>
+
+      <%# TODO: Make a decorator for this. %>
+      <% if blog_post.draft? %>
+        <span class="bg-gray-100 text-gray-400 rounded text-sm px-2 py-1">
+          Draft
+        </span>
+      <% elsif blog_post.scheduled? %>
+        <span class="bg-yellow-100 text-yellow-700 rounded text-sm px-2 py-1">
+          Scheduled for <%= blog_post.published_at %>
+        </span>
+      <% else %>
+        <span class="text-sm px-2">
+          <%# TODO: Make a date helper. %>
+          <%= blog_post.published_at %>
+        </span>
+      <% end %>
     </h2>
+
     <p>
       <%= blog_post.body %>
     </p>
