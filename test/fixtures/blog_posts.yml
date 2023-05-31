@@ -2,6 +2,16 @@
 
 one:
   title: MyString
+  published_at: <%= Time.now %>
 
-two:
+draft:
+  title: Draft
+  published_at: nil
+
+published:
   title: MyString
+  published_at: <%= Time.now %>
+
+scheduled:
+  title: Scheduled
+  published_at: <%= Time.now + 1 %>
