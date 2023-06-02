@@ -4,6 +4,8 @@ class BlogPostsController < ApplicationController
   def index
     @blog_posts = user_signed_in? ? BlogPost.all.sorted : BlogPost.published.sorted
     @pagy, @blog_posts = pagy(@blog_posts)
+  rescue Pagy::OverflowError
+    redirect_to blog_posts_path, alert: 'That page does not exist.'
   end
 
   def show
