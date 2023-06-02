@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding-bottom: 6rem; /* Required for footer positioning */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+footer {
+  right: 0; /* Required for footer positioning */
+  bottom: 0; /* Required for footer positioning */
+  left: 0; /* Required for footer positioning */
+}

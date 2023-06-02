@@ -11,7 +11,10 @@
     <%= form.label :header_image, class: 'block' %>
 
     <% if form.object.persisted? && form.object.header_image.attached? %>
-      <%= image_tag form.object.header_image %>
+      <div id="<%= dom_id(blog_post, :header_image) %>">
+        <%= image_tag form.object.header_image, class: 'w-1/2' %>
+        <%= link_to "Remove", blog_post_header_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Remove image?" }, class: 'text-red-700' %>
+      </div>
     <% else %>
       <p class="italic">No header image yet.</p>
     <% end %>

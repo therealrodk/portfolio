@@ -67,6 +67,7 @@ group :development do
   # gem "spring"
 
   gem 'pry', '~> 0.14.2'
+  gem 'rails_real_favicon', '~> 0.1.1'
 end
 
 group :test do
@@ -79,6 +80,5 @@ end
 gem 'active_storage_validations', '~> 1.0', '>= 1.0.3'
 gem "aws-sdk-s3", require: false
 gem "devise", "~> 4.9"
-gem 'rack-cors', '~> 2.0', '>= 2.0.1'
-
 gem "pagy", "~> 6.0"
+gem 'rack-cors', '~> 2.0', '>= 2.0.1'

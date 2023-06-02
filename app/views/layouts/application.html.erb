@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>therealrodk</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+<head>
+  <title>therealrodk</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= render 'application/favicon' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-  <body>
+<body class="relative m-0 pb-24 min-h-screen">
+  <div class="container m-0">
     <% if notice.present? %>
       <p class="notice bg-blue-200 text-center text-blue-700 py-2"><%= notice %></p>
     <% end %>
@@ -19,16 +21,13 @@
       <p class="alert bg-red-200 text-center text-red-700 py-2"><%= alert %></p>
     <% end %>
 
-    <nav>
-      <% if user_signed_in? %>
-        <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-      <%# else %>
-        <%#= link_to "Log In", new_user_session_path %>
-      <% end %>
-    </nav>
+    <%= render 'layouts/header' %>
 
     <main class="prose mx-auto">
       <%= yield %>
     </main>
-  </body>
+
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
 </html>
