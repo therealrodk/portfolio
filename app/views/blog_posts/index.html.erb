@@ -32,6 +32,8 @@
   </div>
 <% end %>
 
-<div class="my-8">
-  <%== pagy_nav(@pagy) %>
-</div>
+<% unless @pagy.items < 20 %>
+  <div class="my-8">
+    <%== pagy_nav(@pagy) %>
+  </div>
+<% end %>
