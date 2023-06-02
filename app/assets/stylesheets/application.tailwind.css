@@ -3,12 +3,13 @@
   @tailwind components;
   @tailwind utilities;
 */
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import 'actiontext.css';
 @import 'pagy';
-@import 'footer';
+
 /*
 @layer components {
   .btn-primary {
