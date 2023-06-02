@@ -74,4 +74,7 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'active_storage_validations', '~> 1.0', '>= 1.0.3'
+gem "aws-sdk-s3", require: false
 gem "devise", "~> 4.9"
+gem 'rack-cors', '~> 2.0', '>= 2.0.1'

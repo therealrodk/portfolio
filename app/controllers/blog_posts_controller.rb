@@ -49,6 +49,7 @@ class BlogPostsController < ApplicationController
   def blog_post_params
     params.require(:blog_post).permit(
       :body,
+      :header_image,
       :published_at,
       :title
     )

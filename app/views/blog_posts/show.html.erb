@@ -1,3 +1,7 @@
+<% if @blog_post.header_image.attached? %>
+  <%= image_tag @blog_post.header_image %>
+<% end %>
+
 <h1><%= @blog_post.title %></h1>
 <%= link_to "Edit Blog Post", edit_blog_post_path %>
 <%= @blog_post.body %>

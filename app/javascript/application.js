@@ -3,4 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "trix"
 import "@rails/actiontext"
-import "custom/trix_extensions"
+
+//= require activestorage
