@@ -13,7 +13,7 @@ class BlogPost < ApplicationRecord
             size: { less_than: 100.megabytes , message: 'must be < 50 kb' }
   validates :title, presence: true
 
-  scope :sorted, -> { order(published_at: :desc) }
+  scope :sorted, -> { order(published_at: :desc, title: :asc) }
   scope :draft, -> { where(published_at: nil) }
   scope :published, -> { where("published_at <= ?", Time.current) }
   scope :scheduled, -> { where("published_at > ?", Time.current) }

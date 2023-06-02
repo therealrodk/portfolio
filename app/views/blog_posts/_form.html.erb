@@ -8,7 +8,7 @@
   <% end %>
 
   <div>
-    <% if form.object.persisted? %>
+    <% if form.object.persisted? && form.object.header_image.attached? %>
       <%= image_tag form.object.header_image %>
     <% else %>
       <p class="italic">No header image yet.</p>

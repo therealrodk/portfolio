@@ -73,4 +73,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.allowed_cors_origins = 'http://localhost:3000', 'localhost:3000'
+
+  config.assets.debug = true
 end
