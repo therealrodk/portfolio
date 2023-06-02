@@ -23,7 +23,7 @@ body {
   margin-top: 0;
 }
 
-footer {
+#footer {
   right: 0; /* Required for footer positioning */
   bottom: 0; /* Required for footer positioning */
   left: 0; /* Required for footer positioning */
