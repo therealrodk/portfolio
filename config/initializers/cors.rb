@@ -7,4 +7,4 @@ end
 
 # If you want to guard against header attacks on production, you have to manually permit the allowed hosts:
 Rails.application.config.hosts << 'therealrodk.dev'
-Rails.application.config.hosts << 'hatchboxapp.com'
+Rails.application.config.hosts << '.hatchboxapp.com'
