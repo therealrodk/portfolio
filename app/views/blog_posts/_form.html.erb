@@ -8,13 +8,14 @@
   <% end %>
 
   <div>
+    <%= form.label :header_image, class: 'block' %>
+
     <% if form.object.persisted? && form.object.header_image.attached? %>
       <%= image_tag form.object.header_image %>
     <% else %>
       <p class="italic">No header image yet.</p>
     <% end %>
 
-    <%= form.label :header_image, class: 'block' %>
     <%= form.file_field :header_image, direct_upload: true %>
   </div>
 
