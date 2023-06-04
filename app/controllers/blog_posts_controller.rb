@@ -54,6 +54,7 @@ class BlogPostsController < ApplicationController
       :body,
       :header_image,
       :published_at,
+      :tag_list,
       :title
     )
   end

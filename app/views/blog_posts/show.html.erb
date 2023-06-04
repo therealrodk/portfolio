@@ -2,6 +2,17 @@
   <%= image_tag @blog_post.header_image %>
 <% end %>
 
-<h1><%= @blog_post.title %></h1>
-<%= link_to "Edit Blog Post", edit_blog_post_path %>
+<div class="flex justify-between mt-4">
+  <h1><%= @blog_post.title %></h1>
+  <%= link_to "Edit Blog Post", edit_blog_post_path %>
+</div>
+
+<div class="mb-8">
+  <% @blog_post.tags.each do |tag| %>
+    <div class="inline bg-black hover:bg-gray-800 text-white text-xs rounded-full px-2 py-1 mr-2">
+      <%= tag %>
+    </div>
+  <% end %>
+</div>
+
 <%= @blog_post.body %>

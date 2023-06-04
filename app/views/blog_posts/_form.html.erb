@@ -33,7 +33,12 @@
   </div>
 
   <div>
-    <%= form.label :published_at %>
+    <%= form.label :tag_list, 'Tags', class: 'block' %>
+    <%= form.text_area :tag_list %>
+  </div>
+
+  <div>
+    <%= form.label :published_at, class: 'block' %>
     <%= form.datetime_select :published_at, include_blank: true %>
   </div>
 

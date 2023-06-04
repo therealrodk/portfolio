@@ -2,6 +2,8 @@ class BlogPost < ApplicationRecord
   has_rich_text :body
   has_one_attached :header_image
 
+  acts_as_taggable_on :tags
+
   validates :body, presence: true
   validates :header_image, content_type: %w[image/png image/jpeg image/jpg image/gif image/webp],
             dimension: {

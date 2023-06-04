@@ -74,5 +74,9 @@ Rails.application.configure do
 
   config.allowed_cors_origins = 'http://localhost:3000', 'localhost:3000'
 
-  config.assets.debug = true
+  config.assets.debug = false
+
+  # To ensure that the development server always compiles assets on-the-fly (and thus always reflects the most recent state of the code), the development environment must be configured to keep precompiled assets in a different location than production does. Otherwise, any assets precompiled for use in production will clobber requests for them in development (i.e., subsequent changes you make to assets will not be reflected in the browser).
+  # https://guides.rubyonrails.org/asset_pipeline.html#local-precompilation
+  # config.assets.prefix = "/dev-assets"
 end
