@@ -7,7 +7,7 @@
 
   <div role="list" class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
     <% @blog_posts.each do |blog_post| %>
-      <%= link_to blog_post, class: 'grid items-stretch' do %>
+      <%= link_to blog_post, class: 'grid items-stretch border-0' do %>
         <div class="border-2 border-black rounded-lg relative pb-12">
           <% if blog_post.header_image.present? %>
             <%= image_tag blog_post.header_image.variant(resize_to_limit: [314, 128]), class: "w-full rounded-t-lg object-cover" %>
