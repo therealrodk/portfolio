@@ -7,12 +7,12 @@ class BlogPost < ApplicationRecord
   validates :body, presence: true
   validates :header_image, content_type: %w[image/png image/jpeg image/jpg image/gif image/webp],
             dimension: {
-              width: { min: 1024, max: 1024 },
+              width: { min: 628, max: 628 },
               height: { min: 256, max: 256 },
-              message: 'must be 1024x256'
+              message: 'must be 628x256'
             },
             aspect_ratio: :landscape,
-            size: { less_than: 100.megabytes , message: 'must be < 50 kb' }
+            size: { less_than: 50.kilobytes , message: 'must be < 50 kb' }
   validates :title, presence: true
 
   scope :sorted, -> { order(published_at: :desc, title: :asc) }
