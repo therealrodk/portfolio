@@ -29,19 +29,22 @@ module.exports = {
           padding: '.5rem 1rem',
           borderRadius: '.25rem',
           fontWeight: '600',
+          borderBottom: 'none'
         },
         '.btn-blue': {
           backgroundColor: '#3490dc',
           color: '#fff',
           '&:hover': {
-            backgroundColor: '#2779bd'
+            backgroundColor: '#2779bd',
+            color: '#fff',
           },
         },
         '.btn-red': {
           backgroundColor: '#e3342f',
           color: '#fff',
           '&:hover': {
-            backgroundColor: '#cc1f1a'
+            backgroundColor: '#cc1f1a',
+            color: '#fff',
           },
         },
       })
