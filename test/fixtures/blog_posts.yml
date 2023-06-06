@@ -2,16 +2,20 @@
 
 one:
   title: MyString
+  slug: slug-one
   published_at: <%= Time.now %>
 
 draft:
   title: Draft
+  slug: slug-draft
   published_at: nil
 
 published:
   title: MyString
+  slug: slug-published
   published_at: <%= Time.now %>
 
 scheduled:
   title: Scheduled
+  slug: slug-scheduled
   published_at: <%= Time.now + 1.day %>

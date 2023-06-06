@@ -59,4 +59,6 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
 
   config.allowed_cors_origins = 'http://localhost:3000', 'localhost:3000'
+
+  config.hosts << "www.example.com"
 end

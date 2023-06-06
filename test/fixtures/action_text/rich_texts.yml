@@ -2,3 +2,23 @@
 #   record: name_of_fixture (ClassOfFixture)
 #   name: content
 #   body: <p>In a <i>million</i> stars!</p>
+
+one:
+  record: one (BlogPost)
+  name: body
+  body: MyBodyText
+
+draft:
+  record: draft (BlogPost)
+  name: body
+  body: MyBodyText
+
+published:
+  record: published (BlogPost)
+  name: body
+  body: MyBodyText
+
+scheduled:
+  record: scheduled (BlogPost)
+  name: body
+  body: MyBodyText

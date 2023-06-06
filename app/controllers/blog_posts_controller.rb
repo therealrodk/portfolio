@@ -35,8 +35,11 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
-    @blog_post.destroy
-    redirect_to root_path, notice: 'Blog post was successfully destroyed.'
+    if @blog_post.destroy
+      redirect_to root_path, notice: 'Blog post was successfully destroyed.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

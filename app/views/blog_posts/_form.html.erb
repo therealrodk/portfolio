@@ -45,8 +45,7 @@
     <%= form.datetime_select :published_at, include_blank: true %>
   </div>
 
-    <div class="flex justify-<%= select_justification(form.object) %> mt-4">
-      <%= button_to "Delete", @blog_post, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: 'btn btn-red' if form.object.persisted? %>
-      <%= form.button class: 'btn btn-blue' %>
+  <div class="flex justify-end mt-4">
+    <%= form.button class: 'btn btn-blue' %>
   </div>
 <% end %>
