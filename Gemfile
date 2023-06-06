@@ -82,5 +82,6 @@ gem 'acts-as-taggable-on', '~> 9.0', '>= 9.0.1'
 gem "aws-sdk-s3", require: false
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 gem "devise", "~> 4.9"
+gem 'friendly_id', '~> 5.5'
 gem "pagy", "~> 6.0"
 gem 'rack-cors', '~> 2.0', '>= 2.0.1'
