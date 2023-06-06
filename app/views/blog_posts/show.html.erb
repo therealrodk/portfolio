@@ -8,11 +8,7 @@
 </div>
 
 <div class="mb-8">
-  <% @blog_post.tags.each do |tag| %>
-    <div class="inline bg-black hover:bg-gray-800 text-white text-xs rounded-full px-2 py-1 mr-2">
-      <%= tag %>
-    </div>
-  <% end %>
+  <%= render 'shared/tags', blog_post: @blog_post %>
 </div>
 
 <%= @blog_post.body %>

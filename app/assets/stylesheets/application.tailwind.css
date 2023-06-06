@@ -9,6 +9,7 @@
 @import "tailwindcss/utilities";
 @import 'actiontext.css';
 @import 'pagy';
+@import 'logo';
 
 /*
 @layer components {

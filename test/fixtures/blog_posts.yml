@@ -14,4 +14,4 @@ published:
 
 scheduled:
   title: Scheduled
-  published_at: <%= Time.now + 1 %>
+  published_at: <%= Time.now + 1.day %>

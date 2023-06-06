@@ -1,6 +1,11 @@
 <div id="footer" class="py-4 bg-black mt-auto absolute">
-  <%= image_tag 'logo-mini.png', class: 'mx-auto' %>
-  <p class="text-white text-center leading-5 align-middle text-xl">
+  <div class="flex justify-center">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo-mini.png', class: 'mx-auto inline-block' %>
+    <% end %>
+  </div>
+
+  <p class="text-white text-center leading-5 align-middle text-lg mt-2">
     © <%= Date.current.year %>
   </p>
 </div>

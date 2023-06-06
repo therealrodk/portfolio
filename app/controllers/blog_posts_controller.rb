@@ -3,9 +3,7 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
   def index
     @blog_posts = user_signed_in? ? BlogPost.all.sorted : BlogPost.published.sorted
-    @pagy, @blog_posts = pagy(@blog_posts)
-  rescue Pagy::OverflowError
-    redirect_to blog_posts_path, alert: 'That page does not exist.'
+    @pagy, @blog_posts = pagy(@blog_posts, items: 21)
   end
 
   def show

@@ -1,0 +1,5 @@
+.red-shadow {
+  text-shadow: -1px 2px 0 rgba(255, 0, 0, 0.5) ;
+  -webkit-text-shadow: -1px 2px 0 rgba(255, 0, 0, 0.5) ;
+  -moz-text-shadow: -1px 2px 0 rgba(255, 0, 0, 0.5) ;
+}

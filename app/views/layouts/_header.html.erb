@@ -1,5 +1,9 @@
 <header class="bg-black py-4 relative">
-  <%= image_tag 'logo.png', alt: 'therealrodk', class: 'mx-auto' %>
+  <div class="flex justify-center">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.png', alt: 'therealrodk', class: 'mx-auto' %>
+    <% end %>
+  </div>
 
   <nav class="absolute top-2 right-2 text-white">
     <% if user_signed_in? %>
