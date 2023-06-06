@@ -1,0 +1,7 @@
+.form-group {
+  @apply border-b-2 border-gray-200 py-8;
+}
+
+.form-group label {
+  @apply text-lg text-gray-600 font-semibold;
+}

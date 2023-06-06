@@ -19,7 +19,7 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.wrapper h1 {
+h1 {
   text-decoration: underline;
 }
 
@@ -27,4 +27,8 @@ body {
   right: 0; /* Required for footer positioning */
   bottom: 0; /* Required for footer positioning */
   left: 0; /* Required for footer positioning */
+}
+
+.wrapper {
+  @apply box-border w-full md:w-628 mx-auto;
 }

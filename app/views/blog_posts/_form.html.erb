@@ -7,8 +7,11 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :header_image, class: 'block' %>
+    <p class="text-xs text-gray-400">
+      Must be 628x256, < 50kB
+    </p>
 
     <% if form.object.persisted? && form.object.header_image.attached? %>
       <div id="<%= dom_id(blog_post, :header_image) %>">
@@ -22,25 +25,28 @@
     <%= form.file_field :header_image, direct_upload: true %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :title, class: 'block' %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'w-full' %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :body %>
     <%= form.rich_text_area :body %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :tag_list, 'Tags', class: 'block' %>
-    <%= form.text_area :tag_list %>
+    <%= form.text_field :tag_list, class: 'w-full', value: BlogPostDecorator.new(blog_post).display_tag_list %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :published_at, class: 'block' %>
     <%= form.datetime_select :published_at, include_blank: true %>
   </div>
 
-  <%= form.button %>
+    <div class="flex justify-<%= select_justification(form.object) %> mt-4">
+      <%= button_to "Delete", @blog_post, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: 'btn btn-red' if form.object.persisted? %>
+      <%= form.button class: 'btn btn-blue' %>
+  </div>
 <% end %>

@@ -1,5 +1,8 @@
-<h1>Edit Blog Post</h1>
+<div class="wrapper">
+  <div class="flex justify-between mt-2 mb-4">
+    <h1 class="text-xl font-semibold leading-8 tracking-tight text-gray-900">Edit Blog Post</h1>
+    <%= link_to "Cancel", blog_post_path(@blog_post), class: 'btn btn-blue' %>
+  </div>
 
-<%= render partial: "form", locals: {blog_post: @blog_post} %>
-
-<%= button_to "Delete", @blog_post, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+  <%= render partial: "form", locals: { blog_post: @blog_post } %>
+</div>

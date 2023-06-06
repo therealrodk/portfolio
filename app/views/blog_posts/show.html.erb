@@ -1,6 +1,6 @@
-<div class="w-full md:w-628 mx-auto">
+<div class="wrapper">
   <% if @blog_post.header_image.attached? %>
-    <%= image_tag @blog_post.header_image %>
+    <%= image_tag @blog_post.header_image, class: 'w-full' %>
   <% end %>
 
   <div class="mx-4 md:mx-0">

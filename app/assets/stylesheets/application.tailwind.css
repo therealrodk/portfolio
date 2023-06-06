@@ -8,6 +8,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import 'actiontext.css';
+@import 'application';
+@import 'forms';
 @import 'pagy';
 @import 'logo';
 

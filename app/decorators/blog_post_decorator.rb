@@ -18,4 +18,10 @@ class BlogPostDecorator < SimpleDelegator
 
     html.html_safe unless published?
   end
+
+  def display_tag_list
+    return unless persisted?
+
+    tag_list.join(', ').html_safe
+  end
 end
