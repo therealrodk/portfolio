@@ -13,10 +13,10 @@
     </h1>
 
     <div class="mb-8">
-      <%= render 'shared/tags', blog_post: @blog_post %>
+      <%= render 'shared/tags', tags: @blog_post.tags %>
     </div>
 
-    <div class="text-justify">
+    <div class="text-justify red-links">
       <%= @blog_post.body %>
     </div>
 

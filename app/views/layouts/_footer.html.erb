@@ -1,11 +1,17 @@
-<div id="footer" class="py-4 bg-black mt-auto absolute">
-  <div class="flex justify-center">
-    <%= link_to root_path, class: 'border-0' do %>
-      <%= image_tag 'logo-mini.png', class: 'mx-auto inline-block' %>
-    <% end %>
+<div id="footer" class="mt-auto absolute">
+  <div class="p-2">
+    <%= render 'shared/tags', tags: @all_tags %>
   </div>
 
-  <p class="text-white text-center leading-5 align-middle text-lg mt-2">
-    © <%= Date.current.year %>
-  </p>
+  <div class="py-4 bg-black">
+    <div class="flex justify-center">
+      <%= link_to root_path do %>
+        <%= image_tag 'logo-mini.png', class: 'mx-auto inline-block' %>
+      <% end %>
+    </div>
+
+    <p class="text-white text-center leading-5 align-middle text-lg mt-2">
+      © <%= Date.current.year %>
+    </p>
+  </div>
 </div>

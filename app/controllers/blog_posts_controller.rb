@@ -1,8 +1,12 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_all_tags, only: [:show, :index]
   def index
     @blog_posts = user_signed_in? ? BlogPost.all.sorted : BlogPost.published.sorted
+    if params[:tag].present?
+      @blog_posts = @blog_posts.tagged_with(params[:tag])
+    end
     @pagy, @blog_posts = pagy(@blog_posts, items: 21)
   end
 
@@ -43,6 +47,10 @@ class BlogPostsController < ApplicationController
   end
 
   private
+
+  def set_all_tags
+    @all_tags = ActsAsTaggableOn::Tag.all.order(name: :asc)
+  end
 
   def set_blog_post
     @blog_post = user_signed_in? ? BlogPost.friendly.find(params[:id]) : BlogPost.friendly.published.find(params[:id])

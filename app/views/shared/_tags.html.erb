@@ -1,5 +1,9 @@
-<% blog_post.tags.each do |tag| %>
-  <div class="inline-block border border-gray-400 text-gray-400 hover:text-white hover:bg-gray-400 rounded px-2 py-1 mr-2 mb-2">
-    <%= tag %>
-  </div>
+<% if tags.present? %>
+  <% tags.each do |tag| %>
+    <%= link_to root_path(tag: tag.name) do %>
+      <div class="inline-block border border-gray-400 text-gray-400 hover:text-white hover:bg-gray-400 rounded px-2 py-1 mr-2 mb-2">
+        <%= tag %>
+      </div>
+    <% end %>
+  <% end %>
 <% end %>
