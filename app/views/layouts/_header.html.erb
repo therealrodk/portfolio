@@ -1,15 +1,15 @@
-<header class="bg-black py-4 relative">
-  <div class="flex justify-center">
-    <%= link_to root_path do %>
-      <%= image_tag 'logo.png', alt: 'therealrodk', class: 'mx-auto' %>
-    <% end %>
-  </div>
-
-  <nav class="absolute top-2 right-2 text-white">
+<header class="bg-black pb-4">
+  <nav class="text-white flex justify-end pr-1 pt-1">
     <% if user_signed_in? %>
       <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "Log In", new_user_session_path %>
     <% end %>
   </nav>
+
+  <div class="flex justify-center">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.png', alt: 'therealrodk', class: 'mx-auto' %>
+    <% end %>
+  </div>
 </header>
