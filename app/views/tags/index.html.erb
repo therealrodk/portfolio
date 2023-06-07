@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h1 class="text-xl font-semibold leading-8 tracking-tight text-gray-900 mb-4 text-center">
+    Tag Manager
+  </h1>
+
+  <% @all_tags.each do |tag| %>
+    <%= link_to tag_path(tag) do %>
+      <div class="inline-block border border-gray-400 text-gray-400 hover:text-white hover:bg-gray-400 rounded px-2 py-1 mr-2 mb-2">
+        <%= tag %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

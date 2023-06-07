@@ -23,6 +23,10 @@
 
     <%= render 'layouts/header' %>
 
+    <% if user_signed_in? %>
+      <%= render 'layouts/admin_menu' %>
+    <% end %>
+
     <main class="mx-auto">
       <%= yield %>
     </main>

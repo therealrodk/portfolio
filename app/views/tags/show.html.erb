@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <h1 class="text-center text-3xl">
+    <%= @tag.name %>
+  </h1>
+
+  <%= form_with url: update_tag_path(@tag), method: :put do |form| %>
+    <div class="form-group">
+      <%= form.label :name, class: 'block' %>
+      <%= form.text_field :name, class: 'w-full', value: @tag.name %>
+    </div>
+
+    <div class="flex justify-end mt-4">
+      <%= form.button class: 'btn btn-blue' %>
+    </div>
+  <% end %>
+
+
+  <%= button_to "Delete", delete_tag_path(tag: @tag), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: 'btn btn-red' %>
+</div>
