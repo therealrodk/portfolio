@@ -25,3 +25,8 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener ('turbo:load', (event) => {
+    document.querySelectorAll('pre').forEach( (block) => { hljs.highlightBlock(block); });
+  });
+</script>
