@@ -55,7 +55,7 @@ class BlogPostsController < ApplicationController
   end
 
   def set_blog_post
-    @blog_post = user_signed_in? ? BlogPost.friendly.find(params[:id]) : BlogPost.friendly.published.find(params[:id])
+    @blog_post = user_signed_in? ? BlogPost.with_attached_header_image.friendly.find(params[:id]) : BlogPost.with_attached_header_image.friendly.published.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
