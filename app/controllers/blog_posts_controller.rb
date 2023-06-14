@@ -1,4 +1,6 @@
 class BlogPostsController < ApplicationController
+  include ActiveStorage::SetCurrent
+
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
   before_action :set_all_tags, only: [:show, :index]

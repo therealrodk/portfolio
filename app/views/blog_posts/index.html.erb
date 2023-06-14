@@ -19,7 +19,11 @@
       <div class="border-2 border-black rounded-lg relative pb-12">
         <%= link_to blog_post, class: 'grid items-stretch border-0' do %>
           <% if blog_post.header_image.present? %>
-            <%= image_tag blog_post.header_image.variant(resize_to_limit: [314, 128]), class: "w-full rounded-t-lg object-cover" %>
+            <%= image_tag blog_post.header_image.variant(resize_to_limit: [314, 128]).processed.url,
+                          class: "w-full rounded-t-lg object-cover",
+                          width: 314,
+                          height: 128
+            %>
           <% end %>
 
           <div class="mb-2 p-2">
