@@ -1,6 +1,6 @@
 <div class="wrapper">
   <% if @blog_post.header_image.attached? %>
-    <%= image_tag @blog_post.header_image, class: 'w-full' %>
+    <%= image_tag @blog_post.header_image, class: 'w-full', width: 628, height: 256 %>
   <% end %>
 
   <div class="mx-4 md:mx-0">
@@ -40,9 +40,12 @@
     "description": "<%= @blog_post.description %>",
     "datePublished": "<%= @blog_post.published_at %>",
     "dateModified": "<%= @blog_post.updated_at %>",
-    "image": [
-      "<%= url_for(@blog_post.header_image) %>"
-    ],
+    "image": {
+      "@type": "ImageObject",
+      "url": "<%= @blog_post.header_image.attached? ? url_for(@blog_post.header_image) : '' %>",
+      "width": 628,
+      "height": 256
+    },
     "author": [
       {
         "@type": "Person",
