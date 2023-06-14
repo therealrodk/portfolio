@@ -25,9 +25,19 @@
   max-width: 50%;
 }
 
+.trix-button--icon-attach,
+.trix-button--icon-strike,
+.trix-button-group-spacer,
+.trix-button-group--file-tools,
+.trix-button--icon-decrease-nesting-level,
+.trix-button--icon-increase-nesting-level {
+  display: none;
+}
+
 .trix-content action-text-attachment .attachment {
-  padding: 0 !important;
-  max-width: 100% !important;
+  display: none;
+  /*padding: 0 !important;*/
+  /*max-width: 100% !important;*/
 }
 
 .trix-content pre.hljs {
