@@ -29,3 +29,7 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+.trix-content pre.hljs {
+  background: #282828
+}
