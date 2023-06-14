@@ -5,7 +5,7 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
   before_action :set_all_tags, only: [:show, :index]
   def index
-    @blog_posts = user_signed_in? ? BlogPost.all.sorted : BlogPost.published.sorted
+    @blog_posts = user_signed_in? ? BlogPost.all.sorted.with_attached_header_image : BlogPost.published.sorted.with_attached_header_image
     if params[:tag].present?
       @blog_posts = @blog_posts.tagged_with(params[:tag])
     end
