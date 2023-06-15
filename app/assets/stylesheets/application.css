@@ -15,7 +15,7 @@
  */
 
 body {
-  padding-bottom: 6rem; /* Required for footer positioning */
+  padding-bottom: 5rem; /* Required for footer positioning */
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -34,9 +34,16 @@ h1 {
 }
 
 .red-links a {
-  @apply border-b-2 border-red-400 hover:text-red-600;
+  @apply border-b-2 border-red-400 hover:border-transparent hover:text-red-600;
 }
 
 .nav-link {
   @apply px-2 py-1 rounded font-bold border-b-0 text-white hover:text-black hover:bg-white;
+}
+
+aside li {
+  list-style: '⇨';
+  margin-left: 1em;
+  padding-left: 0.5em;
+  margin-top: 0.5em;
 }

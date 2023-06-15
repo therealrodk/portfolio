@@ -1,0 +1,81 @@
+<aside class="bg-gray-100 w-full md:w-72 p-2 pb-4 md:pb-2 md:min-h-screen border-t-2 md:border-t-0 md:border-l-2 border-gray-400">
+  <% if user_signed_in? %>
+    <div class="mt-4">
+      <h5 class="font-semibold text-lg">Admin</h5>
+      <ul class="red-links text-xs">
+        <li>
+          <%= link_to 'Tag Manager', tags_path %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mt-4">
+    <h5 class="font-semibold text-lg">Useful Tools</h5>
+    <ul class="red-links text-xs">
+      <li>
+        <%= link_to "Compress Or Die", 'https://compress-or-die.com/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Cupcake Ipsum", 'https://cupcakeipsum.com/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "For A Good Strftime", 'https://www.foragoodstrftime.com/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Regexr", 'https://regexr.com/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mt-4">
+    <h5 class="font-semibold text-lg">Resources</h5>
+    <ul class="red-links text-xs">
+      <li>
+        <%= link_to "Codewars", 'https://www.codewars.com/dashboard', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Confreaks", 'https://www.youtube.com/@Confreaks', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Deanin", 'https://www.youtube.com/channel/UCRQv-3VvPT9mArF5RfrlpKQ', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "DevCamp", 'https://rails.devcamp.com/public-profile/rod-klingler634#', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Exercism", 'https://exercism.org/dashboard', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "GoRails", 'https://gorails.com/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Learn Ruby (BigBinary)", 'https://academy.bigbinary.com/learn-ruby', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Refactoring Guru", 'https://refactoring.guru/home', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Rails Guides", 'https://guides.rubyonrails.org/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "RubyGuides", 'https://www.rubyguides.com/ruby-post-index/', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to "Scrimba", 'https://scrimba.com/allcourses', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mt-4">
+    <h5 class="font-semibold text-lg">Music To Code By</h5>
+    <ul class="red-links text-xs">
+      <li>
+        <%= link_to 'Big Shoes - A Shoegaze Megamix', 'https://www.youtube.com/playlist?list=PLWszjdxoIOEANDF_-LVbQAf8M-AApGaWP', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+      <li>
+        <%= link_to 'Lunar Vacation', 'https://www.youtube.com/watch?v=c4oINxOklNk', target: :_blank, rel: 'noreferrer noopener' %>
+      </li>
+    </ul>
+  </div>
+</aside>

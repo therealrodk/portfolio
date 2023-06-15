@@ -14,8 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 
-<body class="relative m-0 pb-64 md:pb-24 min-h-screen">
-  <div class="m-0 pb-10 md:pb-24">
+<body class="relative m-0 min-h-screen">
+  <div class="">
     <% if notice.present? %>
       <p class="notice bg-blue-200 text-center text-blue-700 py-2"><%= notice %></p>
     <% end %>
@@ -25,13 +25,19 @@
 
     <%= render 'layouts/header' %>
 
-    <% if user_signed_in? %>
-      <%= render 'layouts/admin_menu' %>
-    <% end %>
+    <div class="md:flex md:justify-between">
+      <main class="mx-auto">
+        <%= yield %>
 
-    <main class="mx-auto">
-      <%= yield %>
-    </main>
+        <% if @all_tags.present? %>
+          <div class="p-2 mt-4">
+            <h4>All Tags:</h4>
+            <%= render 'shared/tags', tags: @all_tags %>
+          </div>
+        <% end %>
+      </main>
+      <%= render 'layouts/sidebar' %>
+    </div>
 
     <%= render 'layouts/footer' %>
   </div>
