@@ -3,11 +3,13 @@ class BlogPost < ApplicationRecord
   friendly_id :title, use: :slugged
 
   has_rich_text :body
+  has_one_attached :audio_file
   has_one_attached :header_image
 
   acts_as_taggable_on :tags
 
   validates :body, presence: true
+  validates :audio_file, content_type: %w[audio/mpeg]
   validates :header_image, content_type: %w[image/png image/jpeg image/jpg image/gif image/webp],
             dimension: {
               width: { min: 628, max: 628 },

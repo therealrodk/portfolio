@@ -16,6 +16,21 @@
       <%= render 'shared/tags', tags: @blog_post.tags %>
     </div>
 
+    <% if @blog_post.audio_file.attached? %>
+      <div class="mb-8">
+        <p class="text-xs text-gray-400">
+          Listen to this blog post:
+        </p>
+        <%= audio_tag @blog_post.audio_file.url,
+                      controls: true,
+                      downloadable: false,
+                      class: 'w-full',
+                      "controlsList": "nodownload",
+                      "preload": "auto"
+        %>
+      </div>
+    <% end %>
+
     <div class="text-justify red-links">
       <%= @blog_post.body %>
     </div>

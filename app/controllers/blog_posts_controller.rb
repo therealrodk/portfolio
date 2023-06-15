@@ -62,6 +62,7 @@ class BlogPostsController < ApplicationController
 
   def blog_post_params
     params.require(:blog_post).permit(
+      :audio_file,
       :body,
       :description,
       :header_image,

@@ -38,6 +38,22 @@
   <div class="form-group red-links">
     <%= form.label :body %>
     <%= form.rich_text_area :body %>
+
+    <%= form.label :audio_file, class: 'block mt-4' %>
+    <p class="text-xs text-gray-400">
+      Must be an mp3 file.
+    </p>
+
+    <% if form.object.persisted? && form.object.audio_file.attached? %>
+      <div id="<%= dom_id(blog_post, :audio_file) %>">
+        <%= audio_tag form.object.audio_file.url, controls: true, class: 'w-full' %>
+        <%= link_to "Remove", blog_post_audio_file_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Remove audio?" }, class: 'text-red-700' %>
+      </div>
+    <% else %>
+      <p class="italic my-4">No audio file exists for this blog post.</p>
+    <% end %>
+
+    <%= form.file_field :audio_file, direct_upload: true %>
   </div>
 
   <div class="form-group">

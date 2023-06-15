@@ -1,15 +1,15 @@
-class BlogPosts::HeaderImagesController < ApplicationController
+class BlogPosts::AudioFilesController < ApplicationController
   include ActionView::RecordIdentifier
 
   before_action :authenticate_user!
   before_action :set_blog_post
 
   def destroy
-    @blog_post.header_image.purge_later
+    @blog_post.audio_file.purge_later
 
     respond_to do |format|
       format.html { redirect_to edit_blog_post_path(@blog_post) }
-      format.turbo_stream { render turbo_stream: turbo_stream.remove(dom_id(@blog_post, :header_image)) }
+      format.turbo_stream { render turbo_stream: turbo_stream.remove(dom_id(@blog_post, :audio_file)) }
     end
   end
 

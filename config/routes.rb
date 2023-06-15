@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :blog_posts do
+    resource :audio_file, only: [:destroy], module: :blog_posts
     resource :header_image, only: [:destroy], module: :blog_posts
   end
 
