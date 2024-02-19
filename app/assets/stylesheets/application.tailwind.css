@@ -4,8 +4,6 @@
   @tailwind utilities;
 */
 
-/*
-NOTE: Importing from application.css so these appear at the top of the minified stylesheet.
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -14,7 +12,6 @@ NOTE: Importing from application.css so these appear at the top of the minified 
 @import 'forms';
 @import 'pagy';
 @import 'logo';
-*/
 
 /*
 @layer components {
