@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# 100.times do |i|
-#   BlogPost.create(
-#     title: "Blog Post #{i}",
-#     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-#   )
-# end
+# TODO: Add header images
+10.times do |i|
+  BlogPost.create!(
+    title: "Blog Post #{i}",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    published_at: Time.now
+  )
+end
