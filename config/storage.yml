@@ -22,6 +22,7 @@ wasabi:
   region: <%= Rails.application.credentials.dig(:wasabi, :region) %>
   secret_access_key: <%= Rails.application.credentials.dig(:wasabi, :secret_access_key) %>
   service: S3
+  public: true
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
