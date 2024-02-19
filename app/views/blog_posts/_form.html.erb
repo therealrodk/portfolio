@@ -63,7 +63,11 @@
 
   <div class="form-group">
     <%= form.label :published_at, class: 'block' %>
-    <%= form.datetime_select :published_at, include_blank: true, start_year: Time.now.year %>
+    <% if form.object.persisted? %>
+      <%= form.datetime_select :published_at, include_blank: true %>
+    <% else %>
+      <%= form.datetime_select :published_at, include_blank: true, start_year: Time.now.year %>
+    <% end %>
   </div>
 
   <div class="flex justify-end mt-4">
