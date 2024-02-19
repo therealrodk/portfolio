@@ -63,7 +63,7 @@
 
   <div class="form-group">
     <%= form.label :published_at, class: 'block' %>
-    <%= form.datetime_select :published_at, include_blank: true %>
+    <%= form.datetime_select :published_at, include_blank: true, start_year: Time.now.year %>
   </div>
 
   <div class="flex justify-end mt-4">
